@@ -4,14 +4,23 @@ a chat software, wirtten by python
 * is unfinished.
 
 *Account system
+
 *Multithreading
+
 *Picture and files translating
+
 *Firends list
+
 *Grouping chat
+
 *Safe
+
 *GUI
+
 *History logs
+
 *Chatting record
+
 *Cross-platform
 
 
