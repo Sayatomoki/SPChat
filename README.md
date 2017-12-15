@@ -3,25 +3,25 @@ a chat software, wirtten by python
 
 * is unfinished.
 
-*Account system
+* Account system
 
-*Multithreading
+* Multithreading
 
-*Picture and files translating
+* Picture and files translating
 
-*Firends list
+* Firends list
 
-*Grouping chat
+* Grouping chat
 
-*Safe
+* Safe
 
-*GUI
+* GUI
 
-*History logs
+* History logs
 
-*Chatting record
+* Chatting record
 
-*Cross-platform
+* Cross-platform
 
 
 Account system is going to be done by mysql, after my sleeping.
