@@ -1,25 +1,9 @@
+
 import socket
-
-class account(object):
-	"""docstring for account"""
-	def __init__(self, arg):
-		super(account, self).__init__()
-		self.arg = arg
-
-
-# the numbers of error more than 3
-
-def numErrMrThTr():
-	print 'the count of error more 3!'
-	exit()
-
-# sign up a new account to server
-
-def signUp():
-	for i in range(3):
-		user_id = raw_input('please enter your name: ')
-		user_pwd = raw_input('please enter your password: ')
-		user_rpwd = raw_input('please confirm your password: ')
+import json
+import sys
+sys.path.append('../lib/')
+import spcLib
 
 # link to the point out server
 
@@ -51,11 +35,21 @@ for i in range(3):
 			print 'patermeter error! try again.'
 			continue
 	else:
-		print 'patermeter error! try again.'
-		continue
+		if flag == 1:
+			if spcLib.signIn():
+				break
+			else:
+				continue
+		else:
+			if spcLib.signUp():
+				break
+			else:
+				continue
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST, PORT))
+
+for i in range(3):
 
 
 
