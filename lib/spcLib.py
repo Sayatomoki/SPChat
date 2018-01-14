@@ -1,12 +1,18 @@
 import json
 import socket
 
+# class jsob
+
 class account(object):
-	def __init__(self, user_id, user_pwd):
-		self.user_id = user_id
-		self.user_pwd = user_pwd
-	def ac2json(self):
-		return json.dumps(self.__dict__)
+    def __init__(self, sock, userId, userPwd, to = NULL, msg = NULL):
+        self.sock = sock
+        self.userId = userId
+        self.userPwd = userPwd
+        self.to = to
+        self.msg = msg
+        
+    def ac2dict(self):
+        return self.__dict__
 
 # the numbers of error more than 3
 
@@ -22,7 +28,6 @@ def signIn(HOST, PORT):
 	usr = account(user_id, user_pwd)
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.connect((HOST, PORT))
-	s.send('signIn')	
 	s.send(usr.ac2json())
 	buf = s.recv(1024)
 	s.close()

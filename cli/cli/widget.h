@@ -7,6 +7,7 @@ namespace Ui {
 class Widget;
 }
 
+
 class Widget : public QWidget
 {
     Q_OBJECT
@@ -14,6 +15,17 @@ class Widget : public QWidget
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
+
+private slots:
+    void on_linkBtn_clicked();
+
+    void on_disBtn_clicked();
+
+    void on_loginBtn_clicked();
+
+    void on_logoutBtn_clicked();
+
+    void on_signUpBtn_clicked();
 
 private:
     Ui::Widget *ui;
